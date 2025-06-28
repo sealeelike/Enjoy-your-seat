@@ -1,7 +1,7 @@
 # Enjoy-your-seat
 This app helps XJTLU students find empty seats near them for self-study.
 
-The program will integrate the campus map and the mrbs website to select the nearest available classroom for users. Users only need to click on their location on the map, and the algorithm will recommend a suitable place for users.
+The program will integrate the campus map and the [mrbs](https://mrbs.xjtlu.edu.cn/) website to select the nearest available classroom for users. Users only need to click on their location on the map, and the algorithm will recommend a suitable place for users.
 
 ## Table of Contents (Optional)
 
