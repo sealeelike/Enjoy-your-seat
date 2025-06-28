@@ -7,19 +7,29 @@ The program will integrate the campus map and the [mrbs](https://mrbs.xjtlu.edu.
 
 <!-- Use this if your README is long to help users navigate. -->
 
-- [Technologies Used](#technologies-used)
-- [Requirements](#requirements)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Documentation](#documentation)
-- [Visuals](#visuals)
-- [Support](#support)
-- [Project Roadmap](#project-roadmap)
-- [Project Status](#project-status)
-- [Contributing](#contributing)
-- [Acknowledgments](#acknowledgments)
-- [License](#license)
-- [Changelog](#changelog)
+以下分别为中文与英文两份 Mermaid 流程图代码。  
+将代码复制到支持 Mermaid 的编辑器/Markdown 环境中即可渲染可视化流程图。
+
+
+
+```mermaid
+flowchart TD
+    A[Start] --> B[Select desired stay time]
+    B --> C[Mark current location on map]
+    C --> D[Identify nearby buildings]
+    D --> E[Fetch classroom information from website]
+    E --> F{Is user inside a building?}
+    F -- Yes --> G[Fetch room list of current building only]
+    F -- No  --> H[Fetch room lists of nearby buildings]
+    G --> I[Aggregate all room data]
+    H --> I
+    I --> J[Filter rooms that fit selected time slot]
+    J --> K[Sort: buildings near→far, floors low→high]
+    K --> L[Display recommendations to user<br/>(facilities & services optional)]
+    L --> M[End]
+```
+
+
 
 ## Technologies Used (Optional)
 
