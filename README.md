@@ -24,15 +24,21 @@ H --> I[Attach relevant facilities and services]
 
 ### Core Matchmaking Mechanics
 
-```mermail
+```mermaid
 graph TD
-        A[获取所有房间信息列表] --> B[将每个房间的可用时间分割为最小单位时间块];
-        B --> C[合并具有相同可用房间集合的连续时间块];
-        C --> D[生成最终的时间线: 一系列带着不同房间列表的时间块];
-        E[读取用户的需求时间段] --> F[在时间线上寻找能覆盖需求的时间块组合];
-        F --> G{找到可用组合?};
-        G -- 是 --> H[为每个组合计算'差异度'以找到最优房间切换路径];
-        H --> I[推荐'差异度'最小的方案给用户];
-        G -- 否 --> J[告知用户无可用方案];
-        I --> K[结束];
-        J --> K[结束];
+subgraph preparation phase
+A[Get all room information lists] --> B[Split the available time of each room into unit time blocks, such as 20 minutes] --> C[Merge the same time blocks] -- That is to say --> D[Each time block may have a different room number label] --> E[Time blocks can be connected to cover a complete day]
+end
+
+subgraph processing phase
+E --> F[Read the user's required time period] --> G[Select time blocks]
+G --> H{Find available combinations?}
+H -- Yes --> I[Calculate the 'room number difference' for each combination to find the optimal room switching path]
+I --> J{The difference is 0}
+J -- Yes --> K[The user does not need to change position midway]
+J -- No --> L[The user needs to change position midway]
+K --> O[The most ideal situation]
+L --> M[Recommend the solution with the smallest 'difference' to the user]
+H -- No --> N[Inform the user that there is no available solution😭😭😭]
+end
+```
