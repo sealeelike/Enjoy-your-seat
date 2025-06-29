@@ -22,5 +22,5 @@ G --> H
 H --> I[Attach relevant facilities and services]
 ```
 
-### Core Algorithm
+### Core Matchmaking Mechanics
 
