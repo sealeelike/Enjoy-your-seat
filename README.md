@@ -42,3 +42,5 @@ L --> M[Recommend the solution with the smallest 'difference' to the user]
 H -- No --> N[Inform the user that there is no available solution😭😭😭]
 end
 ```
+## Effect Preview
+![](Schematic%20diagram.jpg)
