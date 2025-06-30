@@ -27,7 +27,7 @@ H --> I[Attach relevant facilities and services]
 ```mermaid
 graph TD
 subgraph preparation phase
-A[Get all room information lists] --> B[Split the available time of each room into unit time blocks, such as 20 minutes] --> C[Merge the same time blocks] -- That is to say --> D[Each time block may have a different room number label] --> E[Time blocks can be connected to cover a complete day]
+A[Get all room information lists] --> B[Split the available time of each room into unit time blocks, such as 20 minutes] --> C[Merge the same time blocks] -- That is to say --> D[Each time block may wear several room number labels] --> E[Time blocks can be connected to cover a complete day]
 end
 
 subgraph processing phase
