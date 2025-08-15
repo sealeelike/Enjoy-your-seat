@@ -44,8 +44,8 @@ end
 ```
 ### Solver for Room combination
 - least room change
-- longest overlapping period
-- leaving early when the room availability is about to expire
+- longest overlapping period (give users more freedom to decide when to switch)
+- leaving early when the room availability is about to expire (optional)
 
 ## Effect Preview
 ![](Schematic%20diagram.jpg)
