@@ -24,23 +24,43 @@ H --> I[Attach relevant facilities and services]
 
 ### Core Matchmaking Mechanics
 
-```mermaid
-graph TD
-subgraph preparation phase
-A[Get all room information lists] --> B[Split the available time of each room into unit time blocks, such as 20 minutes] --> C[Merge the same time blocks] -- That is to say --> D[Each time block may wear several room number labels] --> E[Time blocks can be connected to cover a complete day]
-end
+> the initial time-based matching logic has been deprecated, you can find it in V0.0.0 release.
 
-subgraph processing phase
-E --> F[Read the user's required time period] --> G[Select time blocks]
-G --> H{Find available combinations?}
-H -- Yes --> I[Calculate the 'room number difference' for each combination to find the optimal room switching path]
-I --> J{The difference is 0}
-J -- Yes --> K[The user does not need to change position midway]
-J -- No --> L[The user needs to change position midway]
-K --> O[The most ideal situation]
-L --> M[Recommend the solution with the smallest 'difference' to the user]
-H -- No --> N[Inform the user that there is no available solution😭😭😭]
-end
+```mermaid
+flowchart TD
+    %% ============= Core Algorithm Flow ============= %%
+    A([Start]) --> B[Read config parameters<br/>area_id, time_start, time_end,<br/>facility requirements etc.]
+    B --> C[Read JSON vector data from ready_data_xxx directory]
+    C --> D[Filter: keep only vectors with given area_id]
+    D --> E[Facility filter]
+    E --> F[Coverage pre-check<br/>Can all rooms combined cover the requested period?]
+    F -- No --> Z1([Output: Cannot satisfy requirement<br/>End])
+    F -- Yes --> G[Remove chunks completely contained in another<br/>preprocess_2]
+
+    G --> H[0_change: Is there a single chunk covering the whole request?]
+    H -- Yes --> Z0([Output all feasible 0-change vectors<br/>One room only, End])
+    H -- No --> I[1_change: Two-end attack selection<br/>Left: covers start with latest ending<br/>Right: covers end with earliest starting]
+    I --> J{Do the two segments have any overlap in time?}
+    J -- Yes --> Z2([Output 1-change solution<br/>with switching window, End])
+    J -- No --> K[2_changes: Search middle chunk covering the gap between left and right]
+    
+    K --> L{Is there a single middle chunk covering the entire gap?}
+    L -- Yes --> Z3([Output 2-change solution<br/>Maximize switch overlap, End])
+    L -- No --> M{Allow three changes?}
+    M -- No --> Z4([Output: No feasible plan<br/>End])
+    M -- Yes --> N[Run 1_change within the gap<br/>get middle_left and middle_right]
+    N --> O{Do middle_left and middle_right have overlap?}
+    O -- Yes --> Z5([Output 3-change solution, End])
+    O -- No --> Z4
+
+    %% Styles for clarity
+    style A fill:#3e8ef7,stroke:#fff,stroke-width:2px,color:#fff
+    style Z1 fill:#ef476f,stroke:#fff,stroke-width:2px,color:#fff
+    style Z0 fill:#06d6a0,stroke:#fff,stroke-width:2px,color:#fff
+    style Z2 fill:#ffd166,stroke:#333,stroke-width:1px
+    style Z3 fill:#ffd166,stroke:#333,stroke-width:1px
+    style Z4 fill:#ef476f,stroke:#fff,stroke-width:2px,color:#fff
+    style Z5 fill:#ffd166,stroke:#333,stroke-width:1px
 ```
 ### Solver for Room combination
 - least room change
