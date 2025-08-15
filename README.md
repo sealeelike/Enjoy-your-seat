@@ -42,5 +42,9 @@ L --> M[Recommend the solution with the smallest 'difference' to the user]
 H -- No --> N[Inform the user that there is no available solution😭😭😭]
 end
 ```
+### Solver for Room combination
+- least room change
+- longest overlapping period
+
 ## Effect Preview
 ![](Schematic%20diagram.jpg)
