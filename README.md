@@ -11,18 +11,14 @@ The program will integrate the campus map and the [mrbs](https://mrbs.xjtlu.edu.
 
 ```mermaid
 flowchart TD
-A[User marks current location on the map] --> B[App identifies and locates nearby buildings]
-B --> C[Pull relevant room information]
-C --> D[User selects length of stay]
-D --> E{Is there a room that meets the requirements?}
-E -- Yes --> F[Directly recommend a room]
-E -- No --> G[Try room combination plan]
-F--> H[Multiple plans are presented from near to far buildings and from low to high floors]
-G --> H
-H --> I[Attach relevant facilities and services]
+A[User marks current location on the map] --> B[App identifies and locates nearby buildings*]
+B --> C[Pull relevant room information <br> #40;if not deployed on the school's official server, or it could directly use the built-in data#41;]
+C --> D[Users submit start and end times and even additional requests for facilities]
+D --> E[Multiple plans are presentedDifferent options are presented.* <br> #40;They may have different advantages, such as rich facilities, large capacity, proximity to the starting point...but the choice is left to the user#41;]
+E --> F[Attach relevant facilities and services]
 ```
 
-### Core Matchmaking Mechanics
+### How are room plans generated?
 
 > the initial time-based matching logic has been deprecated, you can find it in V0.0.0 release.
 
@@ -62,10 +58,14 @@ flowchart TD
     style Z4 fill:#ef476f,stroke:#fff,stroke-width:2px,color:#fff
     style Z5 fill:#ffd166,stroke:#333,stroke-width:1px
 ```
-### Solver for Room combination
+## Advantages and disadvantages of this algorithm
+advantages
 - least room change
 - longest overlapping period (give users more freedom to decide when to switch)
-- leaving early when the room availability is about to expire (optional)
+
+disadvantages
+- ?
+
 
 ## Effect Preview
 ![](Schematic%20diagram.jpg)
