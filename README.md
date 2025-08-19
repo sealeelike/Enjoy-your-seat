@@ -75,5 +75,6 @@ disadvantages
 - ?
 
 ## Todo list
--[ ]Provide more granular advice, not just on campus, such as within the Fundation Building
+- [ ] Provide more granular advice, not just on campus, such as within the Fundation Building
+- [ ] facility filter
 
