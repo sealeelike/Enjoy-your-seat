@@ -74,4 +74,6 @@ advantages
 disadvantages
 - ?
 
+## Todo list
+-[ ]Provide more granular advice, not just on campus, such as within the Fundation Building
 
