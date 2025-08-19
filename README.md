@@ -3,6 +3,10 @@ This app helps XJTLU students find empty seats near them for self-study.
 
 The program will integrate the campus map and the [mrbs](https://mrbs.xjtlu.edu.cn/) website to select the nearest available classroom for users. Users only need to click on their location on the map, and the algorithm will recommend a suitable place for users.
 
+### Effect Preview
+![](Schematic%20diagram.jpg)
+
+
 ## Introduction
 
 <!-- Use this if your README is long to help users navigate. -->
@@ -17,6 +21,10 @@ C --> D[Users submit start and end times and even additional requests for facili
 D --> E[Multiple plans are presentedDifferent options are presented.* <br> #40;They may have different advantages, such as rich facilities, large capacity, proximity to the starting point...but the choice is left to the user#41;]
 E --> F[Attach relevant facilities and services]
 ```
+
+### How the app determines the appropriate area？
+
+The relevant information is hardcoded into the program, that is, once the relative coordinates input by the user are read, a set of pre-made area selection solutions will be returned.
 
 ### How are room plans generated?
 
@@ -67,5 +75,3 @@ disadvantages
 - ?
 
 
-## Effect Preview
-![](Schematic%20diagram.jpg)
