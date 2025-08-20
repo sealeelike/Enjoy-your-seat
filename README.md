@@ -77,4 +77,5 @@ disadvantages
 ## Todo list
 - [ ] Provide more granular advice, not just on campus, such as within the Fundation Building
 - [ ] facility filter
+- [ ] Create a mapping table of areaID and facility to avoid the need to traverse and check to complete user filtering requirements.
 
