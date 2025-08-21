@@ -1,6 +1,7 @@
 # Enjoy-your-seat
 
-简体中文/[English](README.md)
+<p align="center">中文 | <a href="./README.md">English</a></p>
+
 
 本应用旨在帮助 XJTLU 的学生找到附近可供栖身的自习空间。
 
