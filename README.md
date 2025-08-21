@@ -39,6 +39,7 @@ E --> F[Attach relevant facilities and services]
 ### Usage Demonstration (concept)
 ![](concept-demo.png)
 
+(arrows indicate user input field)
 ### How the app determines the appropriate area？
 
 The relevant information is hardcoded into the program, that is, once the relative coordinates input by the user are read, a set of pre-made area selection solutions will be returned.
