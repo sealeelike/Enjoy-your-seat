@@ -1,5 +1,15 @@
 # Enjoy-your-seat
 
+> [!IMPORTANT]
+> **Important Notice**
+>
+> This repository contains only Python scripts intended for algorithmic research and client-side tool development. **It does not host, store, or distribute any proprietary data or internal information from the university.**
+>
+> All data acquisition (e.g., room availability) is performed locally on the user's machine, using their own legitimate credentials. The resulting data files are explicitly excluded from this repository via `.gitignore`.
+>
+> This project is provided "AS IS" under the [MIT License](LICENSE). The developer assumes no responsibility for how you use these scripts or for the data you acquire. Please ensure that your use of this tool complies with all relevant local and university regulations.
+
+
 <p align="center">English | <a href="./README-hans.md">中文</a></p>
 
 This app helps XJTLU students find empty seats near them for self-study.
