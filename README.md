@@ -76,6 +76,10 @@ advantages
 disadvantages
 - ?
 
+## How to Use
+
+please see [this guide](quick-start.md)
+
 ## Todo list
 - [ ] Provide more granular advice, not just on campus, such as within the Fundation Building
 - [ ] facility filter
