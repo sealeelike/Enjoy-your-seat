@@ -21,6 +21,8 @@ C --> D[Users submit start and end times and even additional requests for facili
 D --> E[Multiple plans are presentedDifferent options are presented.* <br> #40;They may have different advantages, such as rich facilities, large capacity, proximity to the starting point...but the choice is left to the user#41;]
 E --> F[Attach relevant facilities and services]
 ```
+### Usage Demonstration (concept)
+![](concept-demo.png)
 
 ### How the app determines the appropriate area？
 
