@@ -1,0 +1,21 @@
+# programme 目录下的本地环境与敏感文件
+/programme/.env
+/programme/area_mapping.json
+
+# programme 下的日志目录
+/programme/logs/
+# 更保险的写法，包含子项（可选）
+/programme/logs/**
+
+# programme 下按日期命名的数据目录（格式 data_DD-MM-YYYY）
+/programme/data_[0-9][0-9]-[0-9][0-9]-[0-9][0-9][0-9][0-9]/
+# 更通用的 data_*（若只想严格匹配上面格式可删除下一行）
+/programme/data_*/
+
+# programme 下按日期命名的页面目录（格式 pages_DD-MM-YYYY）
+/programme/pages_[0-9][0-9]-[0-9][0-9]-[0-9][0-9][0-9][0-9]/
+/programme/pages_*/
+
+# programme 下按日期命名的准备数据目录（格式 ready_data_DD-MM-YYYY）
+/programme/ready_data_[0-9][0-9]-[0-9][0-9]-[0-9][0-9][0-9][0-9]/
+/programme/ready_data_*/
