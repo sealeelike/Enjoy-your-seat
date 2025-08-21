@@ -1,0 +1,22 @@
+name: ejys
+channels:
+  - conda-forge # Best practice: Use conda-forge for more packages
+  - defaults
+dependencies:
+  # Core language
+  - python=3.11
+
+  # Main packages for your project (conda will handle their dependencies)
+  - selenium
+  - beautifulsoup4
+  - requests
+  - httpx
+  - python-dotenv
+  - pyyaml
+
+  # Pip is needed to install packages from the pip section below
+  - pip
+
+  - pip:
+    # Only list packages here that are NOT available on conda-forge
+    - webdriver-manager

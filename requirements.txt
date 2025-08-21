@@ -1,0 +1,7 @@
+selenium
+beautifulsoup4
+requests
+httpx
+python-dotenv
+pyyaml
+webdriver-manager
