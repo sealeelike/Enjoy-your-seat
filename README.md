@@ -12,13 +12,22 @@
 
 <p align="center">English | <a href="./README-hans.md">中文</a></p>
 
-This app helps XJTLU students find empty seats near them for self-study.
+## Introduction
 
-The program will integrate the campus map and the [mrbs](https://mrbs.xjtlu.edu.cn/) website to select the nearest available classroom for users. Users only need to click on their location on the map, and the algorithm will recommend a suitable place for users.
+Tired of wandering the XJTLU campus looking for an empty classroom? `Enjoy-your-seat` is a smart study room finder that automates the search for you.
+
+Based on your location and desired study time, it scans the university's [booking system](https://mrbs.xjtlu.edu.cn/) to find the best available rooms. Its core algorithm is designed to create optimized plans with **zero or minimal room changes**, perfect for long, uninterrupted study sessions.
+
+* **Find a room right now, right here:** Instantly see available classrooms in nearby buildings.
+* **Plan for the whole day:** Get a schedule with the fewest possible room changes.
+* **Filter for your needs:** Find rooms with specific equipment like large screens or online meeting setups.
+
+Stop searching and start studying. Let the app find your next seat.
+
 
 ## Table of Contents
 
-* [Introduction](#introduction)
+* [How it works?](#how-it-works)
     * [Effect Preview](#effect-preview)
     * [Rough logic](#rough-logic)
     * [Usage Demonstration (concept)](#usage-demonstration-concept)
@@ -32,7 +41,7 @@ The program will integrate the campus map and the [mrbs](https://mrbs.xjtlu.edu.
 ![](Schematic%20diagram.jpg)
 
 
-## Introduction
+## How it works
 
 <!-- Use this if your README is long to help users navigate. -->
 
