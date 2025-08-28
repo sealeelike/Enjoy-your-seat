@@ -69,6 +69,10 @@ The relevant information is hardcoded into the program, that is, once the relati
 
 _Simply put, when a time period cannot be covered in one go, the algorithm employs a recursive "meet-in-the-middle" strategy: using the beginning and end as anchor points, it finds the time block closest to the other endpoint. If there's still a gap, it tries again._
 
+![](video/demo.gif)
+
+> You can download the full demo video [here](video/FullDemo.mp4)
+
 ```mermaid
 flowchart TD
     %% ============= Core Algorithm Flow ============= %%
