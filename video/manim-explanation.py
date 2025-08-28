@@ -575,4 +575,5 @@ class FullDemo(Scene):
         self.wait(0.5)
         flash_many_blocks(["G3:G7","F8:F11","B9:B20"], period=1, flashes=4, color=RED, stroke_width=5)    
         self.wait(5)
+
         
